@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RemoteView</string>
+    <string name="activity">打开Activity2</string>
+</resources>

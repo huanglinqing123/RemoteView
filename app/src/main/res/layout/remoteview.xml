@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:layout_marginRight="20dp"
+    android:background="@color/colorAccent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/line1"
+        android:gravity="right"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:layout_margin="10dp"
+            android:textColor="#ffffff"
+            android:text="悬浮使我快乐"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Chronometer
+            android:visibility="gone"
+            android:id="@+id/chronometer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

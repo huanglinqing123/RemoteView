@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "26.0.3"
+    defaultConfig {
+        applicationId "jnidemo.hlq.com.hookdemo"
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    allprojects {
+        repositories {
+            jcenter()
+            maven { url "https://maven.google.com" }
+            maven { url 'https://jitpack.io' }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:26.0.0-alpha1'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.mylhyl:acp:1.2.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
+}
